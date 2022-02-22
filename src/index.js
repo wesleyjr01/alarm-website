@@ -1,51 +1,19 @@
-const display = document.getElementById('clock');
-const audio = new Audio('beep.mp3');
-audio.loop = true;
-let alarmTime = null;
-let alarmTimeout = null;
+const clock_div = document.getElementById("clock")
 
-function updateTime() {
-    const date = new Date();
-
-    const hour = formatTime(date.getHours());
-    const minutes = formatTime(date.getMinutes());
-    const seconds = formatTime(date.getSeconds());
-
-
-
-    display.innerText = `${hour} : ${minutes} : ${seconds}`
+function getDate() {
+    var currentDate = new Date();
+    return currentDate;
 }
 
-function formatTime(time) {
-    if (time < 10) {
-        return '0' + time;
-    }
-    return time;
+function getCurrentTime() {
+    var currentDate = getDate();
+    var currentTime = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+    return currentTime;
 }
 
-function setAlarmTime(value) {
-    alarmTime = value;
+function setDateToClock() {
+    var currentTime = getCurrentTime();
+    clock_div.innerHTML = currentTime;
 }
 
-function setAlarm() {
-    if (alarmTime) {
-        const current = new Date();
-        const timeToAlarm = new Date(alarmTime);
-
-        if (timeToAlarm > current) {
-            const timeout = timeToAlarm.getTime() - current.getTime();
-            alarmTimeout = setTimeout(() => audio.play(), timeout);
-            alert('Alarm set');
-        }
-    }
-}
-
-function clearAlarm() {
-    audio.pause();
-    if (alarmTimeout) {
-        clearTimeout(alarmTimeout);
-        alert('Alarm cleared');
-    }
-}
-
-setInterval(updateTime, 1000);
+setInterval(setDateToClock, 1000);
