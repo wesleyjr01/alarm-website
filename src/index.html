@@ -13,11 +13,12 @@
 
 <body>
     <section class="container">
+        <div id="alarm-title">Alarm</div>
         <div id="clock"></div>
         <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
         <div class="controls">
-            <button onclick="setAlarm()" class="button set-alarm">Iniciar</button>
-            <button onclick="clearAlarm()" class="button clear-alarm">Terminar</button>
+            <button onclick="setAlarm()" class="button set-alarm">Start</button>
+            <button onclick="clearAlarm()" class="button clear-alarm">Stop</button>
         </div>
     </section>
     <script src="index.js"></script>
