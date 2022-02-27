@@ -39,7 +39,7 @@ function setCountdown() {
     const current = new Date();
     const timeToAlarm = new Date(alarmTime);
     const timeoutMs = getTimeLeftCountdownInMilliseconds(timeToAlarm, current);
-    let beep = "beep in ->  ";
+    let beep = "";
     if (timeoutMs > 0) {
         const timeoutTime = msToTime(timeoutMs);
         displayCountdown.innerHTML = beep + timeoutTime;

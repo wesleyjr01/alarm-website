@@ -17,7 +17,7 @@ body,html {
 
 #clock {
     font-family: 'Orbitron', sans-serif;
-    font-size: 12vw;
+    font-size: 9vw;
     background-image: linear-gradient(180deg,
         rgba(99,253,136,1) 0%,
         rgba(51,197,142,1) 50%,
@@ -31,7 +31,7 @@ body,html {
 
 #countdown {
     font-family: 'Orbitron', sans-serif;
-    font-size: 8vw;
+    font-size: 7vw;
     background-image: linear-gradient(180deg,
         rgb(222, 99, 253) 0%,
         rgb(168, 51, 197) 50%,
