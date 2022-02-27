@@ -29,6 +29,20 @@ body,html {
     -moz-text-fill-color: transparent;
 }
 
+#countdown {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8vw;
+    background-image: linear-gradient(180deg,
+        rgb(222, 99, 253) 0%,
+        rgb(168, 51, 197) 50%,
+        rgb(116, 39, 90) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
 #alarm-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 5vw;
