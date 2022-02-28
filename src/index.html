@@ -8,24 +8,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Alarme</title>
+    <title>Alarm Online</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2832148185891783"
         crossorigin="anonymous"></script>
     <meta name="google-site-verification" content="g7KNpzioa0rI8vPX41Ib5PENxPXK7wvoXX0-OdxT2Dw" />
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <section class="container">
-        <div id="alarm-title">Alarm</div>
+        <div id="alarm-title">Online Alarm</div>
         <div id="clock"></div>
-        <div id="countdown"></div>
-        <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
         <div class="controls">
+            <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
             <button onclick="setAlarm()" class="button set-alarm">Start</button>
             <button onclick="clearAlarm()" class="button clear-alarm">Stop</button>
         </div>
+        <div id="countdown"></div>
+        <div class="how-to-set">
+            <div class="how-to-set-title">How to set the alarm:</div>
+            <hr>
+            <div class="how-body">
+                <p>Click on the date field and click on day and time to set the alarm.</p>
+                <p>Click on the Start button. When you start the alarm, a countdown will apepar.</p>
+                <p>When the countdown comes to zero, a beep will trigger, meaning the alarm reached it's value.</p>
+                <p>To stop the beep and set-up a new alarm, just click the Stop button.</p>
+            </div>
+        </div>
+
     </section>
+    <footer>
+        <a href="https://github.com/wesleyjr01" style="font-size:48px" class="fa fa-github"></a>
+    </footer>
+
+
     <script src="index.js"></script>
+
+
 </body>
 
 </html>
